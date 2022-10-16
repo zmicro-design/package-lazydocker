@@ -4,6 +4,8 @@ help() {
   echo "Usage:"
   echo "  zmicro lazydocker <args ...>"
   echo ""
+
+  lazydocker --help
 }
 
 version() {

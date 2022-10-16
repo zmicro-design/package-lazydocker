@@ -1,0 +1,31 @@
+#!/bin/bash
+
+help() {
+  echo "Usage:"
+  echo "  zmicro lazydocker <args ...>"
+  echo ""
+}
+
+version() {
+  lazydocker version
+}
+
+core() {
+  case $1 in
+  -h | --help | help)
+    help
+    ;;
+  -v | --version | version)
+    version
+    ;;
+  *)
+    lazydocker "$@"
+    ;;
+  esac
+}
+
+run() {
+  core "$@"
+}
+
+run "$@"

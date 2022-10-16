@@ -51,6 +51,9 @@ jobs:
         id: date
         run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
 
+      - name: Update Zmicro
+        run: zmicro update -a
+
       - uses: actions/checkout@v2
         with:
           fetch-depth: "0"
